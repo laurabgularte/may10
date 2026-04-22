@@ -1,5 +1,5 @@
 function atualizarContador() {
-  const dataInicio = new Date("2025-04-22T00:00:00"); // ajustar pra data de início do namoro
+  const dataInicio = new Date("2025-05-10T00:00:00"); // ajustar pra data de início do namoro
   const agora = new Date();
 
   const diff = agora - dataInicio;
