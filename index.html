@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosso Primeiro Ano</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="titulo-principal">365 Dias de Nós</h1>
+      <div id="contador" class="contador-timer">Carregando tempo...</div>
+    </header>
+
+    <section class="timeline-section">
+      <h2>Nossa História</h2>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h3>22 de Abril de 2025</h3>
+            <p>O dia em que tudo começou.</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>Nosso Primeiro Encontro</h3>
+            <p>Aquele café que mudou tudo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mural">
+      <h2>Momentos Favoritos</h2>
+      <div class="galeria">
+        <div class="polaroid">
+          <img src="foto1.jpg" alt="Momento 1" />
+          <p>Nossa primeira viagem</p>
+        </div>
+        <div class="polaroid">
+          <img src="foto2.jpg" alt="Momento 2" />
+          <p>Risadas de domingo</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cartas">
+      <h2>Cartas para Você</h2>
+      <div class="grid-cartas">
+        <button class="card-btn" onclick="abrirCarta(1)">
+          Leia quando estiver com saudade
+        </button>
+        <button class="card-btn" onclick="abrirCarta(2)">
+          Leia quando quiser sorrir
+        </button>
+      </div>
+    </section>
+
+    <section class="musica">
+      <h2>Nossa Trilha Sonora</h2>
+      <iframe
+        src="https://open.spotify.com/embed/playlist/SUA_PLAYLIST_ID"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          fullscreen;
+          picture-in-picture;
+        "
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

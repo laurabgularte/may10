@@ -1,0 +1,62 @@
+:root {
+  --rosa-suave: #fdf2f2;
+  --rosa-forte: #d63384;
+  --texto: #4a4a4a;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--rosa-suave);
+  color: var(--texto);
+}
+
+.hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("fundo-amor.jpg");
+  background-size: cover;
+}
+
+.titulo-principal {
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
+  color: var(--rosa-forte);
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.polaroid {
+  background: white;
+  padding: 15px 15px 30px 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: 0.3s;
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.polaroid img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.polaroid p {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-top: 15px;
+}
