@@ -19,7 +19,7 @@ body {
   align-items: center;
   background:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url("fundo-amor.jpg");
+    url("fundo-amor.jpg"); /*substiuir pela minha imagem de fundo*/
   background-size: cover;
 }
 
