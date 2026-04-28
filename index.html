@@ -8,79 +8,126 @@
       content="Comemoração especial do nosso primeiro ano juntos"
     />
     <meta name="theme-color" content="#d63384" />
+    <meta name="author" content="Laura Bularte" />
+    <meta property="og:title" content="Nosso Primeiro Ano" />
+    <meta
+      property="og:description"
+      content="Comemoração especial do nosso primeiro ano juntos"
+    />
+    <meta property="og:type" content="website" />
+
     <title>Nosso Primeiro Ano</title>
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="hero">
+    <!-- Hero Section -->
+    <header class="hero" role="banner">
       <h1 class="titulo-principal">365 Dias de Nós</h1>
-      <div id="contador" class="contador-timer">Carregando...</div>
+      <div
+        id="contador"
+        class="contador-timer"
+        role="status"
+        aria-live="polite"
+        aria-label="Contador de tempo desde o início do relacionamento"
+      >
+        <span aria-label="dias">0 Dias</span>
+        <span aria-label="horas">0h</span>
+        <span aria-label="minutos">0m</span>
+        <span aria-label="segundos">0s</span>
+      </div>
     </header>
 
-    <section class="timeline-section">
+    <!-- Timeline Section -->
+    <section class="timeline-section" aria-label="Nossa história">
       <h2>Nossa História</h2>
       <div class="timeline">
-        <div class="container left">
+        <article class="container left">
           <div class="content">
             <h3>10 de maio de 2025</h3>
             <p>O dia em que tudo começou.</p>
           </div>
-        </div>
-        <div class="container right">
+        </article>
+        <article class="container right">
           <div class="content">
             <h3>Nosso Primeiro Encontro</h3>
             <p>Aquele sábado que mudou tudo.</p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="mural">
+    <!-- Photo Gallery Section -->
+    <section class="mural" aria-label="Momentos favoritos">
       <h2>Momentos Favoritos</h2>
       <div class="galeria">
-        <div class="polaroid">
-          <img src="foto1.jpg" alt="Nossa primeira viagem" />
-          <p>Nossa primeira viagem</p>
-        </div>
-        <div class="polaroid">
-          <img src="foto2.jpg" alt="Risadas de domingo" />
-          <p>Risadas de domingo</p>
-        </div>
-        <div class="polaroid">
-          <img src="foto3.jpg" alt="Momento LLF" />
-          <p>Momento LLF</p>
-        </div>
+        <figure class="polaroid">
+          <img
+            src="foto1.jpg"
+            alt="Nossa primeira viagem"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Nossa primeira viagem</figcaption>
+        </figure>
+        <figure class="polaroid">
+          <img
+            src="foto2.jpg"
+            alt="Risadas de domingo"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Risadas de domingo</figcaption>
+        </figure>
+        <figure class="polaroid">
+          <img
+            src="foto3.jpg"
+            alt="Momento LLF"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Momento LLF</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="cartas">
+    <!-- Letters Section -->
+    <section class="cartas" aria-label="Cartas para você">
       <h2>Cartas para Você</h2>
-      <div class="grid-cartas">
-        <button class="card-btn" data-carta="1">
+      <div
+        class="grid-cartas"
+        role="group"
+        aria-label="Botões de cartas para ler"
+      >
+        <button class="card-btn" data-carta="1" aria-expanded="false">
           Leia quando estiver com saudade
         </button>
-        <button class="card-btn" data-carta="2">
+        <button class="card-btn" data-carta="2" aria-expanded="false">
           Leia quando quiser sorrir
         </button>
-        <button class="card-btn" data-carta="3">
+        <button class="card-btn" data-carta="3" aria-expanded="false">
           Leia quando precisar de um abraço
         </button>
-        <button class="card-btn" data-carta="4">
+        <button class="card-btn" data-carta="4" aria-expanded="false">
           Leia quando precisar de um incentivo
         </button>
-        <button class="card-btn" data-carta="5">
+        <button class="card-btn" data-carta="5" aria-expanded="false">
           Leia quando quiser lembrar da gente
         </button>
       </div>
     </section>
 
-    <section class="musica">
+    <!-- Music Section -->
+    <section class="musica" aria-label="Nossa trilha sonora">
       <h2>Nossa Trilha Sonora</h2>
       <iframe
+        title="Spotify Playlist - Nossa Trilha Sonora"
         src="https://open.spotify.com/embed/playlist/4BRJ6FAkhsGmRIHhgVu5NB?utm_source=generator"
         width="100%"
         height="352"
@@ -97,13 +144,28 @@
       </iframe>
     </section>
 
-    <div id="cartaModal" class="modal">
+    <!-- Modal for Letters -->
+    <div
+      id="cartaModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
       <div class="modal-content">
-        <span class="fechar-modal">&times;</span>
+        <h2 id="modalTitle" class="sr-only">Carta</h2>
+        <button
+          class="fechar-modal"
+          aria-label="Fechar modal"
+          title="Fechar (Esc)"
+        >
+          &times;
+        </button>
         <div id="conteudoCarta"></div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
