@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comemoração especial do nosso primeiro ano juntos"
+    />
+    <meta name="theme-color" content="#d63384" />
     <title>Nosso Primeiro Ano</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -13,7 +18,7 @@
   <body>
     <header class="hero">
       <h1 class="titulo-principal">365 Dias de Nós</h1>
-      <div id="contador" class="contador-timer">Carregando tempo...</div>
+      <div id="contador" class="contador-timer">Carregando...</div>
     </header>
 
     <section class="timeline-section">
@@ -36,39 +41,38 @@
 
     <section class="mural">
       <h2>Momentos Favoritos</h2>
-      /*lembrar de colocar fotos nossas aqui em cada momento*/
       <div class="galeria">
         <div class="polaroid">
-          <img src="foto1.jpg" alt="Momento 1" />
+          <img src="foto1.jpg" alt="Nossa primeira viagem" />
           <p>Nossa primeira viagem</p>
         </div>
         <div class="polaroid">
-          <img src="foto2.jpg" alt="Momento 2" />
+          <img src="foto2.jpg" alt="Risadas de domingo" />
           <p>Risadas de domingo</p>
         </div>
-      </div>
-      <div class="polaroid">
-        <img src="foto3.jpg" alt="Momento 3" />
-        <p>Momento LLF</p>
+        <div class="polaroid">
+          <img src="foto3.jpg" alt="Momento LLF" />
+          <p>Momento LLF</p>
+        </div>
       </div>
     </section>
 
     <section class="cartas">
       <h2>Cartas para Você</h2>
       <div class="grid-cartas">
-        <button class="card-btn" onclick="abrirCarta(1)">
+        <button class="card-btn" data-carta="1">
           Leia quando estiver com saudade
         </button>
-        <button class="card-btn" onclick="abrirCarta(2)">
+        <button class="card-btn" data-carta="2">
           Leia quando quiser sorrir
         </button>
-        <button class="card-btn" onclick="abrirCarta(3)">
+        <button class="card-btn" data-carta="3">
           Leia quando precisar de um abraço
         </button>
-        <button class="card-btn" onclick="abrirCarta(4)">
+        <button class="card-btn" data-carta="4">
           Leia quando precisar de um incentivo
         </button>
-        <button class="card-btn" onclick="abrirCarta(5)">
+        <button class="card-btn" data-carta="5">
           Leia quando quiser lembrar da gente
         </button>
       </div>
@@ -92,6 +96,13 @@
       >
       </iframe>
     </section>
+
+    <div id="cartaModal" class="modal">
+      <div class="modal-content">
+        <span class="fechar-modal">&times;</span>
+        <div id="conteudoCarta"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
